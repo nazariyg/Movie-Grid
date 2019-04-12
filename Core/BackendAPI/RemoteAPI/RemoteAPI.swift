@@ -7,6 +7,8 @@ import Foundation
 
 public protocol RemoteAPI {
     static var baseURL: URL { get }
+    static var version: Int { get }
+    static var defaultRequestParameters: [String: Any] { get }
     static var url: RemoteAPIURLSubscript { get }
 }
 
@@ -30,7 +32,10 @@ public final class RemoteAPIURLSubscript {
 
     public subscript(endpoint: RemoteAPIEndpoint) -> URL {
         let endpointPath = endpoint.path
-        let url = apiType.baseURL.appendingPathComponent(endpointPath)
+        let url =
+            apiType.baseURL
+            .appendingPathComponent(String(apiType.version))
+            .appendingPathComponent(endpointPath)
         return url
     }
 

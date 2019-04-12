@@ -22,6 +22,7 @@
 		5E0D620F21C25D49003D8CD0 /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0D620E21C25D49003D8CD0 /* GlobalFunctions.swift */; };
 		5E0D621121C260F9003D8CD0 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0D621021C260F9003D8CD0 /* String+Localization.swift */; };
 		5E0FF3F8221321CC0029E3C6 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0FF3F7221321CC0029E3C6 /* UINavigationController.swift */; };
+		5E141C0B22609B8600AE3388 /* Backend.API.Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E141C0A22609B8600AE3388 /* Backend.API.Movie.swift */; };
 		5E1A99D021EC76F500AC3812 /* ActivityTrackingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1A99CF21EC76F500AC3812 /* ActivityTrackingService.swift */; };
 		5E1A99D221EC77CA00AC3812 /* ActivityTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1A99D121EC77CA00AC3812 /* ActivityTracker.swift */; };
 		5E1A99D421EC7BF200AC3812 /* DummyActivityTrackingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1A99D321EC7BF200AC3812 /* DummyActivityTrackingService.swift */; };
@@ -204,6 +205,7 @@
 		5E0D620E21C25D49003D8CD0 /* GlobalFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
 		5E0D621021C260F9003D8CD0 /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
 		5E0FF3F7221321CC0029E3C6 /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
+		5E141C0A22609B8600AE3388 /* Backend.API.Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backend.API.Movie.swift; sourceTree = "<group>"; };
 		5E1A99CF21EC76F500AC3812 /* ActivityTrackingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTrackingService.swift; sourceTree = "<group>"; };
 		5E1A99D121EC77CA00AC3812 /* ActivityTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTracker.swift; sourceTree = "<group>"; };
 		5E1A99D321EC7BF200AC3812 /* DummyActivityTrackingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyActivityTrackingService.swift; sourceTree = "<group>"; };
@@ -900,6 +902,7 @@
 			isa = PBXGroup;
 			children = (
 				5E60A3E121D3B04B00FF4110 /* Backend.swift */,
+				5E141C0A22609B8600AE3388 /* Backend.API.Movie.swift */,
 				5E09BCCB21DFB02900092646 /* BackendAPIRequester.swift */,
 			);
 			path = Backend;
@@ -1542,6 +1545,7 @@
 				5E7120BD21FDCF4A00EEC14A /* UISceneTransition.swift in Sources */,
 				5E60A3E521D3B83600FF4110 /* CoreError.swift in Sources */,
 				5E918CA821C820E5000E3A85 /* GeneralConfig.swift in Sources */,
+				5E141C0B22609B8600AE3388 /* Backend.API.Movie.swift in Sources */,
 				5EDEAD5621F8D84D002BAA15 /* UIFont.swift in Sources */,
 				5E5493C12212C48A004BC602 /* UINetworkStatusNotifier.swift in Sources */,
 				5E7120C021FDCF4A00EEC14A /* UIShiftyZoomyAnimationController.swift in Sources */,

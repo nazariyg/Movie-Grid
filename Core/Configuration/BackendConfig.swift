@@ -8,6 +8,7 @@ public protocol BackendConfig {
     var urlScheme: URLScheme { get }
     var urlHost: String { get }
     var baseURL: URL { get }
+    var apiKey: String { get }
     var serverTrustPolicyDisableEvaluationDomains: [String] { get }
 }
 
@@ -24,12 +25,14 @@ public extension BackendConfig {
 
 // Dev environment.
 public struct BackendConfigDev: BackendConfig {
-    public let urlHost = "https://api.themoviedb.org"
+    public let urlHost = "api.themoviedb.org"
+    public let apiKey = "ebea8cfca72fdff8d2624ad7bbf78e4c"
 }
 
 // Prod environment.
 public struct BackendConfigProd: BackendConfig {
-    public let urlHost = "https://api.themoviedb.org"
+    public let urlHost = "api.themoviedb.org"
+    public let apiKey = "ebea8cfca72fdff8d2624ad7bbf78e4c"
 }
 
 public extension BackendConfig {
