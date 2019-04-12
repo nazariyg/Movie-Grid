@@ -15,6 +15,7 @@
 		5E087FEE2260C9E300EB9719 /* Backend+ParameterKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E087FED2260C9E300EB9719 /* Backend+ParameterKey.swift */; };
 		5E087FF02260CA6600EB9719 /* RemoteAPIEndpoint+Backend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E087FEF2260CA6600EB9719 /* RemoteAPIEndpoint+Backend.swift */; };
 		5E087FF32260D29E00EB9719 /* MovieDatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E087FF22260D29E00EB9719 /* MovieDatabaseService.swift */; };
+		5E087FF52260EAAD00EB9719 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E087FF42260EAAD00EB9719 /* Movie.swift */; };
 		5E09BCCC21DFB02900092646 /* BackendAPIRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E09BCCB21DFB02900092646 /* BackendAPIRequester.swift */; };
 		5E09BCCE21DFB1B400092646 /* HTTPRequestAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E09BCCD21DFB1B400092646 /* HTTPRequestAuthentication.swift */; };
 		5E09BCD721E0B5BA00092646 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E09BCD621E0B5BA00092646 /* Bundle.swift */; };
@@ -204,6 +205,7 @@
 		5E087FED2260C9E300EB9719 /* Backend+ParameterKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Backend+ParameterKey.swift"; sourceTree = "<group>"; };
 		5E087FEF2260CA6600EB9719 /* RemoteAPIEndpoint+Backend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RemoteAPIEndpoint+Backend.swift"; sourceTree = "<group>"; };
 		5E087FF22260D29E00EB9719 /* MovieDatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDatabaseService.swift; sourceTree = "<group>"; };
+		5E087FF42260EAAD00EB9719 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		5E09BCCB21DFB02900092646 /* BackendAPIRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendAPIRequester.swift; sourceTree = "<group>"; };
 		5E09BCCD21DFB1B400092646 /* HTTPRequestAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestAuthentication.swift; sourceTree = "<group>"; };
 		5E09BCD621E0B5BA00092646 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
@@ -431,6 +433,7 @@
 		5E087FE62260AE8700EB9719 /* Store */ = {
 			isa = PBXGroup;
 			children = (
+				5E087FF42260EAAD00EB9719 /* Movie.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -1625,6 +1628,7 @@
 				5E60A3DE21D3AF6900FF4110 /* RemoteAPIEndpoint.swift in Sources */,
 				5EC18B5621D6838A003981C4 /* JSONTypealiases.swift in Sources */,
 				5E7120BB21FDCF4A00EEC14A /* UIRootViewControllerContainer.swift in Sources */,
+				5E087FF52260EAAD00EB9719 /* Movie.swift in Sources */,
 				5E1A99D421EC7BF200AC3812 /* DummyActivityTrackingService.swift in Sources */,
 				5E918CAA21C820EC000E3A85 /* Config.swift in Sources */,
 				5EC18B5421D6188F003981C4 /* Requester.swift in Sources */,
