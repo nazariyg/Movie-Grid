@@ -1,0 +1,67 @@
+PODS:
+  - Alamofire (4.8.2)
+  - Cartography (3.1.0)
+  - Kingfisher (5.3.1)
+  - lottie-ios (3.0.3)
+  - R.swift (5.0.3):
+    - R.swift.Library (~> 5.0.0)
+  - R.swift.Library (5.0.1)
+  - ReactiveCocoa (9.0.0):
+    - ReactiveSwift (~> 5.0)
+  - ReactiveSwift (5.0.1):
+    - Result (~> 4.1)
+  - Realm (3.12.0):
+    - Realm/Headers (= 3.12.0)
+  - Realm/Headers (3.12.0)
+  - RealmSwift (3.12.0):
+    - Realm (= 3.12.0)
+  - Result (4.1.0)
+  - SwiftLint (0.31.0)
+  - SwiftyBeaver (1.7.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.7)
+  - Cartography (~> 3.0)
+  - Kingfisher (~> 5.0)
+  - lottie-ios
+  - R.swift
+  - ReactiveCocoa
+  - ReactiveSwift
+  - RealmSwift (= 3.12.0)
+  - SwiftLint
+  - SwiftyBeaver
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Cartography
+    - Kingfisher
+    - lottie-ios
+    - R.swift
+    - R.swift.Library
+    - ReactiveCocoa
+    - ReactiveSwift
+    - Realm
+    - RealmSwift
+    - Result
+    - SwiftLint
+    - SwiftyBeaver
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Cartography: 1988b7578871a56c036e7af17195cb2190edf18c
+  Kingfisher: d9e7e0b209b59b8f9873aa2f37654e81a7beea51
+  lottie-ios: 06e0b54aab85ba128e332687d7f4ac4861a7a7ae
+  R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
+  R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
+  ReactiveCocoa: 29709cf0cc7502ddd04a51220e10ee0336d8bec8
+  ReactiveSwift: cac20a5bbe560c5806bd29c0fccf90d03b996ac1
+  Realm: cdaef23c4ddb36ab1ddffed23f5a7f3332fc5585
+  RealmSwift: 5576324033f0aa5ef1e0a839a3da2281dff47a7f
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  SwiftLint: 7a0227733d786395817373b2d0ca799fd0093ff3
+  SwiftyBeaver: 4cc0080d2e23f980652e28978db11a5c9da39165
+
+PODFILE CHECKSUM: c527b99105579338880e5d5e3a977cc45b09f20a
+
+COCOAPODS: 1.6.0.beta.1

@@ -1,0 +1,21 @@
+/*
+  Copyright © 2019 Nazariy Gorpynyuk. All rights reserved.
+*/
+
+"app_name" = "MovieGrid";
+
+"error_networkingError" = "Networking error";
+
+"error_serverError" = "Server error";
+"error_notAuthenticated" = "Not authenticated";
+"error_networkResponseNotFound" = "Response: Not Found";
+"error_httpErrorCode" = "Error status code in HTTP response";
+"error_unexpectedHTTPResponseContentType" = "Unexpected HTTP response content type";
+"error_unexpectedHTTPResponsePayload" = "Unexpected HTTP response payload";
+"error_apiEntityDeserializationError" = "API entity deserialization error";
+
+"error_generic_error_notification" = "Something went wrong";
+"error_unknown" = "Unknown error";
+
+"network_offline_notification" = "No Internet connection";
+"network_online_notification" = "Connected to Internet";
