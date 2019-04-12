@@ -14,6 +14,7 @@
 		5E087FEC2260C94400EB9719 /* Backend+DateDecodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E087FEB2260C94400EB9719 /* Backend+DateDecodingStrategy.swift */; };
 		5E087FEE2260C9E300EB9719 /* Backend+ParameterKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E087FED2260C9E300EB9719 /* Backend+ParameterKey.swift */; };
 		5E087FF02260CA6600EB9719 /* RemoteAPIEndpoint+Backend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E087FEF2260CA6600EB9719 /* RemoteAPIEndpoint+Backend.swift */; };
+		5E087FF32260D29E00EB9719 /* MovieDatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E087FF22260D29E00EB9719 /* MovieDatabaseService.swift */; };
 		5E09BCCC21DFB02900092646 /* BackendAPIRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E09BCCB21DFB02900092646 /* BackendAPIRequester.swift */; };
 		5E09BCCE21DFB1B400092646 /* HTTPRequestAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E09BCCD21DFB1B400092646 /* HTTPRequestAuthentication.swift */; };
 		5E09BCD721E0B5BA00092646 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E09BCD621E0B5BA00092646 /* Bundle.swift */; };
@@ -202,6 +203,7 @@
 		5E087FEB2260C94400EB9719 /* Backend+DateDecodingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Backend+DateDecodingStrategy.swift"; sourceTree = "<group>"; };
 		5E087FED2260C9E300EB9719 /* Backend+ParameterKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Backend+ParameterKey.swift"; sourceTree = "<group>"; };
 		5E087FEF2260CA6600EB9719 /* RemoteAPIEndpoint+Backend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RemoteAPIEndpoint+Backend.swift"; sourceTree = "<group>"; };
+		5E087FF22260D29E00EB9719 /* MovieDatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDatabaseService.swift; sourceTree = "<group>"; };
 		5E09BCCB21DFB02900092646 /* BackendAPIRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendAPIRequester.swift; sourceTree = "<group>"; };
 		5E09BCCD21DFB1B400092646 /* HTTPRequestAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestAuthentication.swift; sourceTree = "<group>"; };
 		5E09BCD621E0B5BA00092646 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
@@ -431,6 +433,14 @@
 			children = (
 			);
 			path = Store;
+			sourceTree = "<group>";
+		};
+		5E087FF12260D25A00EB9719 /* MovieDatabaseService */ = {
+			isa = PBXGroup;
+			children = (
+				5E087FF22260D29E00EB9719 /* MovieDatabaseService.swift */,
+			);
+			path = MovieDatabaseService;
 			sourceTree = "<group>";
 		};
 		5E09BCD521E0B59400092646 /* Bundle */ = {
@@ -1036,6 +1046,7 @@
 				5EFCBDED21CBD744006DA962 /* Networking */,
 				5E1A99CD21EB999F00AC3812 /* BackendAPI */,
 				5E087FE42260AE7000EB9719 /* Entities */,
+				5E087FF12260D25A00EB9719 /* MovieDatabaseService */,
 				5EFCBDF921CE8CEA006DA962 /* Store */,
 				5EE5E2E821C01853009E3803 /* Logging */,
 				5E1A99CE21EB99D100AC3812 /* ActivityTracking */,
@@ -1635,6 +1646,7 @@
 				5E9C34982215C447000DB42F /* UIAnimatedInteractionController.swift in Sources */,
 				5E5493C32212F298004BC602 /* UILabelBase.swift in Sources */,
 				5E918CA621C81B97000E3A85 /* App.swift in Sources */,
+				5E087FF32260D29E00EB9719 /* MovieDatabaseService.swift in Sources */,
 				5E7120B221FDCF4A00EEC14A /* UISceneTransitionStyle.swift in Sources */,
 				5E087FF02260CA6600EB9719 /* RemoteAPIEndpoint+Backend.swift in Sources */,
 				5E7120B821FDCF4A00EEC14A /* UIStyledLabel.swift in Sources */,
