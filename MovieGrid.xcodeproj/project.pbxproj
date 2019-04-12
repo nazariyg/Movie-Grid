@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		39EC708DF77E8A660EF4514B /* Pods_MovieGrid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8A630A536EAEA525A37D613 /* Pods_MovieGrid.framework */; };
 		4BD67AB95C62F13E8692B434 /* Pods_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E69807B11437B1090E2223BB /* Pods_Core.framework */; };
+		5E087FE82260B03E00EB9719 /* APIMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E087FE72260B03E00EB9719 /* APIMovie.swift */; };
+		5E087FEA2260B14800EB9719 /* APIMoviesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E087FE92260B14800EB9719 /* APIMoviesPage.swift */; };
+		5E087FEC2260C94400EB9719 /* Backend+DateDecodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E087FEB2260C94400EB9719 /* Backend+DateDecodingStrategy.swift */; };
+		5E087FEE2260C9E300EB9719 /* Backend+ParameterKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E087FED2260C9E300EB9719 /* Backend+ParameterKey.swift */; };
+		5E087FF02260CA6600EB9719 /* RemoteAPIEndpoint+Backend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E087FEF2260CA6600EB9719 /* RemoteAPIEndpoint+Backend.swift */; };
 		5E09BCCC21DFB02900092646 /* BackendAPIRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E09BCCB21DFB02900092646 /* BackendAPIRequester.swift */; };
 		5E09BCCE21DFB1B400092646 /* HTTPRequestAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E09BCCD21DFB1B400092646 /* HTTPRequestAuthentication.swift */; };
 		5E09BCD721E0B5BA00092646 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E09BCD621E0B5BA00092646 /* Bundle.swift */; };
@@ -192,6 +197,11 @@
 		0ED13F23A858DB1D6C6C5CE0 /* libPods-MovieGrid-Core.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MovieGrid-Core.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13A246B3A0B6D82EBF3551B4 /* Pods-MovieGrid.dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieGrid.dev.xcconfig"; path = "Target Support Files/Pods-MovieGrid/Pods-MovieGrid.dev.xcconfig"; sourceTree = "<group>"; };
 		52CB024726595C3941FA9A2E /* Pods-Core.dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.dev.xcconfig"; path = "Target Support Files/Pods-Core/Pods-Core.dev.xcconfig"; sourceTree = "<group>"; };
+		5E087FE72260B03E00EB9719 /* APIMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIMovie.swift; sourceTree = "<group>"; };
+		5E087FE92260B14800EB9719 /* APIMoviesPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIMoviesPage.swift; sourceTree = "<group>"; };
+		5E087FEB2260C94400EB9719 /* Backend+DateDecodingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Backend+DateDecodingStrategy.swift"; sourceTree = "<group>"; };
+		5E087FED2260C9E300EB9719 /* Backend+ParameterKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Backend+ParameterKey.swift"; sourceTree = "<group>"; };
+		5E087FEF2260CA6600EB9719 /* RemoteAPIEndpoint+Backend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RemoteAPIEndpoint+Backend.swift"; sourceTree = "<group>"; };
 		5E09BCCB21DFB02900092646 /* BackendAPIRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendAPIRequester.swift; sourceTree = "<group>"; };
 		5E09BCCD21DFB1B400092646 /* HTTPRequestAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestAuthentication.swift; sourceTree = "<group>"; };
 		5E09BCD621E0B5BA00092646 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
@@ -396,6 +406,31 @@
 				C51360407D0DBF1607555B43 /* Pods-MovieGrid.prod.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		5E087FE42260AE7000EB9719 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				5E087FE52260AE8100EB9719 /* Backend */,
+				5E087FE62260AE8700EB9719 /* Store */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		5E087FE52260AE8100EB9719 /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+				5E087FE92260B14800EB9719 /* APIMoviesPage.swift */,
+				5E087FE72260B03E00EB9719 /* APIMovie.swift */,
+			);
+			path = Backend;
+			sourceTree = "<group>";
+		};
+		5E087FE62260AE8700EB9719 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Store;
 			sourceTree = "<group>";
 		};
 		5E09BCD521E0B59400092646 /* Bundle */ = {
@@ -902,6 +937,9 @@
 			isa = PBXGroup;
 			children = (
 				5E60A3E121D3B04B00FF4110 /* Backend.swift */,
+				5E087FEF2260CA6600EB9719 /* RemoteAPIEndpoint+Backend.swift */,
+				5E087FED2260C9E300EB9719 /* Backend+ParameterKey.swift */,
+				5E087FEB2260C94400EB9719 /* Backend+DateDecodingStrategy.swift */,
 				5E141C0A22609B8600AE3388 /* Backend.API.Movie.swift */,
 				5E09BCCB21DFB02900092646 /* BackendAPIRequester.swift */,
 			);
@@ -997,6 +1035,7 @@
 				5E71208621FDCF4A00EEC14A /* UI */,
 				5EFCBDED21CBD744006DA962 /* Networking */,
 				5E1A99CD21EB999F00AC3812 /* BackendAPI */,
+				5E087FE42260AE7000EB9719 /* Entities */,
 				5EFCBDF921CE8CEA006DA962 /* Store */,
 				5EE5E2E821C01853009E3803 /* Logging */,
 				5E1A99CE21EB99D100AC3812 /* ActivityTracking */,
@@ -1555,7 +1594,9 @@
 				5E60A3E221D3B04B00FF4110 /* Backend.swift in Sources */,
 				5EFCBDFF21CE95B7006DA962 /* Realm.swift in Sources */,
 				5E60A3DD21D3AF6400FF4110 /* RemoteAPI.swift in Sources */,
+				5E087FEC2260C94400EB9719 /* Backend+DateDecodingStrategy.swift in Sources */,
 				5EFCBE0121CF7FE3006DA962 /* Realm+Singleton.swift in Sources */,
+				5E087FE82260B03E00EB9719 /* APIMovie.swift in Sources */,
 				5EE7E5B022270D6A00DFC6F7 /* UIInitialSceneType.swift in Sources */,
 				5EFCBE0321CF874F006DA962 /* StoreMigrations.swift in Sources */,
 				5E9C34962215B398000DB42F /* UIInteractablePresentationController.swift in Sources */,
@@ -1569,6 +1610,7 @@
 				5EC82D932232597200CF4E33 /* Object.swift in Sources */,
 				5EC82D8F22323D8100CF4E33 /* Init.swift in Sources */,
 				5E7120B921FDCF4A00EEC14A /* UIEmbeddingNavigationController.swift in Sources */,
+				5E087FEE2260C9E300EB9719 /* Backend+ParameterKey.swift in Sources */,
 				5E60A3DE21D3AF6900FF4110 /* RemoteAPIEndpoint.swift in Sources */,
 				5EC18B5621D6838A003981C4 /* JSONTypealiases.swift in Sources */,
 				5E7120BB21FDCF4A00EEC14A /* UIRootViewControllerContainer.swift in Sources */,
@@ -1579,6 +1621,7 @@
 				5EFCBDFD21CE8E8D006DA962 /* Store.swift in Sources */,
 				5E5493BF2211F7F4004BC602 /* UIButtonBase.swift in Sources */,
 				5EE5E34621C12874009E3803 /* LogManager.swift in Sources */,
+				5E087FEA2260B14800EB9719 /* APIMoviesPage.swift in Sources */,
 				5EE5E34521C12874009E3803 /* Log.swift in Sources */,
 				5E918CA121C7FF96000E3A85 /* EventEmitter.swift in Sources */,
 				5E1A99D021EC76F500AC3812 /* ActivityTrackingService.swift in Sources */,
@@ -1593,6 +1636,7 @@
 				5E5493C32212F298004BC602 /* UILabelBase.swift in Sources */,
 				5E918CA621C81B97000E3A85 /* App.swift in Sources */,
 				5E7120B221FDCF4A00EEC14A /* UISceneTransitionStyle.swift in Sources */,
+				5E087FF02260CA6600EB9719 /* RemoteAPIEndpoint+Backend.swift in Sources */,
 				5E7120B821FDCF4A00EEC14A /* UIStyledLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
