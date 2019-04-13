@@ -18,6 +18,7 @@ private let logCategory = "Movie Database Service"
 
 public final class MovieDatabaseService: MovieDatabaseServiceProtocol {
 
+    // Deserialization queue.
     private let jsonDeserializationQueueScheduler: QueueScheduler = {
         let queueLabel = DispatchQueue.uniqueQueueLabel()
         return QueueScheduler(qos: .utility, name: queueLabel)

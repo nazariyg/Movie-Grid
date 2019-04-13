@@ -11,6 +11,7 @@ public extension Backend {
     static var version: Int { return 3 }
     static var defaultRequestParameters: [String: Any] { return ["api_key": Config.shared.backend.apiKey] }
     static var imageBaseURL: URL { return Config.shared.backend.imageBaseURL }
+    static var paginationFirstPage: Int { return 1 }
 }
 
 // MARK: - Endpoints

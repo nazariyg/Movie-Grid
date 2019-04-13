@@ -16,6 +16,7 @@ public final class Movie: Object {
     public dynamic var overview: String?
     public let voteAverage = RealmOptional<Double>()
 
+    // Ensure object uniqueness.
     public override static func primaryKey() -> String? {
         return #keyPath(id)
     }
@@ -24,9 +25,7 @@ public final class Movie: Object {
 
 public extension Movie {
 
-    enum PosterSize: String {
-        case w92, w154, w185, w342, w500, w780, original
-    }
+    // MARK: - Lifecycle
 
     convenience init?(_ apiMovie: APIMovie) {
         self.init()
@@ -38,6 +37,22 @@ public extension Movie {
         releaseDate = apiMovie.releaseDate
         overview = apiMovie.overview
         voteAverage.value = apiMovie.voteAverage
+    }
+
+    // MARK: - Updating
+
+    func update(from movie: Movie) {
+        posterPath = movie.posterPath
+        title = movie.title
+        releaseDate = movie.releaseDate
+        overview = movie.overview
+        voteAverage.value = movie.voteAverage.value
+    }
+
+    // MARK: - Poster URL
+
+    enum PosterSize: String {
+        case w92, w154, w185, w342, w500, w780, original
     }
 
     func posterURL(for posterSize: PosterSize) -> URL? {
