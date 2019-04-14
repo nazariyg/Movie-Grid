@@ -1,4 +1,4 @@
-// Copyright © 2019 MovieGrid.
+// Copyright © 2019 Nazariy Gorpynyuk.
 // All rights reserved.
 
 import Foundation
@@ -26,19 +26,12 @@ final class HomeScreenRouter: HomeScreenRouterProtocol {
         interactor.eventSignal
             .observe(on: workerQueueScheduler)
             .observeValues { event in
-                _ = event
-            }
-
-        presenter.eventSignal
-            .observe(on: workerQueueScheduler)
-            .observeValues { event in
-                _ = event
-            }
-
-        view.eventSignal
-            .observe(on: workerQueueScheduler)
-            .observeValues { event in
-                _ = event
+                switch event {
+                case let .selectedMovie(movieReference, movieTitle):
+                    let detailParameters = MovieDetailScene.Parameters(movieReference: movieReference, movieTitle: movieTitle)
+                    UIGlobalSceneRouter.shared.go(MovieDetailScene.self, parameters: detailParameters)
+                default: break
+                }
             }
     }
 

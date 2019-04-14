@@ -1,4 +1,4 @@
-// Copyright © 2019 MovieGrid.
+// Copyright © 2019 Nazariy Gorpynyuk.
 // All rights reserved.
 
 import Foundation
@@ -6,10 +6,10 @@ import Cornerstones
 import Core
 import ReactiveSwift
 
-public struct HomeScreenScene: UIScene {
+struct HomeScreenScene: UIScene {
 
     private let _sceneIsInitialized = MutableProperty<Bool>(false)
-    public let sceneIsInitialized: Property<Bool>
+    let sceneIsInitialized: Property<Bool>
 
     private final class Components {
         var interactor: HomeScreenInteractorProtocol!
@@ -21,7 +21,7 @@ public struct HomeScreenScene: UIScene {
     private let components = Components()
     private var workerQueueScheduler: QueueScheduler!
 
-    public init() {
+    init() {
         sceneIsInitialized = Property(_sceneIsInitialized)
 
         DispatchQueue.main.executeSync {
@@ -30,6 +30,8 @@ public struct HomeScreenScene: UIScene {
             let sceneIsInitialized = self.sceneIsInitialized
 
             components.view = InstanceProvider.shared.instance(for: HomeScreenViewProtocol.self, defaultInstance: HomeScreenView())
+            viewController.loadViewIfNeeded()
+
             components.router = InstanceProvider.shared.instance(for: HomeScreenRouterProtocol.self, defaultInstance: HomeScreenRouter())
 
             let workerQueueLabel = DispatchQueue.uniqueQueueLabel()
@@ -61,7 +63,7 @@ public struct HomeScreenScene: UIScene {
         }
     }
 
-    public var viewController: UIViewController {
+    var viewController: UIViewController {
         return components.view as! UIViewController
     }
 

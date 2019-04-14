@@ -61,6 +61,7 @@ public final class UINetworkStatusNotifier: UINetworkStatusNotifierProtocol, Sha
             $0.numberOfLines = 0
             $0.text = "network_offline_notification".localized
             $0.font = .main(Self.messageFontSize)
+            $0.textColor = .white
             $0.textAlignment = .center
             notificationView!.addSubview($0)
         }

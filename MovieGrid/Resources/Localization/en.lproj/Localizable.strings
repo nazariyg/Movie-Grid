@@ -2,7 +2,9 @@
   Copyright © 2019 Nazariy Gorpynyuk. All rights reserved.
 */
 
-"app_name" = "MovieGrid";
+"app_name" = "Movie Grid";
+"latest_movies" = "Latest Movies";
+"poster_unavailable" = "POSTER\nUNAVAILABLE";
 
 "error_networkingError" = "Networking error";
 

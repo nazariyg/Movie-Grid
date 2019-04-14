@@ -17,6 +17,7 @@ def pods
     pod 'R.swift'
     pod 'lottie-ios'
     pod 'SwiftyBeaver'
+    pod 'DeepDiff'
 end
 
 

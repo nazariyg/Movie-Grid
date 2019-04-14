@@ -24,16 +24,16 @@ public final class UIGlobalSceneRouter: UIGlobalSceneRouterProtocol {
 
     public func go<Scene: UIScene>(_ toSceneType: Scene.Type) {
         DispatchQueue.main.executeSync {
-
             //
-
         }
     }
 
     public func go<Scene: ParameterizedUIScene>(_ toSceneType: Scene.Type, parameters: Scene.Parameters) {
         DispatchQueue.main.executeSync {
 
-            //
+            if toSceneType == MovieDetailScene.self {
+                UIScener.shared.next(toSceneType, parameters: parameters)
+            }
 
         }
     }

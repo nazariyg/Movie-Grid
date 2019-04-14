@@ -4,4 +4,4 @@
 #include "Common.xcconfig"
 
 ENVIRONMENT = Dev
-APP_NAME = MovieGrid
+APP_NAME = Movie Grid
