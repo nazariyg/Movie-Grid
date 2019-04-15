@@ -32,6 +32,7 @@ final class HomeScreenView: UIViewControllerBase, HomeScreenViewProtocol, EventE
     private let loadingIndicatorIsHidden = MutableProperty<Bool>(false)
     private var movieViewModels: [NowPlayingMovieCollectionItemViewModel] = []
     private var refreshControl: UIRefreshControl!
+    private var isTransitioningToDifferentSize = false
 
     // MARK: - Lifecycle
 
@@ -103,6 +104,14 @@ final class HomeScreenView: UIViewControllerBase, HomeScreenViewProtocol, EventE
         navigationBarLabel.font = .main(20)
         navigationBarLabel.textColor = Config.shared.appearance.defaultNavigationBarTextColor
         navigationItem.titleView = navigationBarLabel
+    }
+
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        isTransitioningToDifferentSize = true
+        coordinator.animate(alongsideTransition: nil, completion: { [weak self] _ in
+            self?.isTransitioningToDifferentSize = false
+        })
     }
 
     // MARK: - Requests
@@ -178,6 +187,17 @@ extension HomeScreenView: UICollectionViewDelegate {
         else { return }
 
         eventEmitter.send(value: .scrolledToEnd)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, targetContentOffsetForProposedContentOffset proposedContentOffset: CGPoint) -> CGPoint {
+        guard isTransitioningToDifferentSize else { return proposedContentOffset }
+        let sortedVisibleItemIndexPaths = moviesCollectionView.indexPathsForVisibleItems.sorted(by: { $0.row < $1.row })
+        let centralItemIndex = Int(round(Double(sortedVisibleItemIndexPaths.count)/2))
+        if let itemIndexPath = sortedVisibleItemIndexPaths[safe: centralItemIndex] {
+            moviesCollectionView.scrollToItem(at: itemIndexPath, at: .centeredVertically, animated: false)
+            return moviesCollectionView.contentOffset
+        }
+        return proposedContentOffset
     }
 
 }
