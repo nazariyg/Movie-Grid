@@ -5,6 +5,9 @@
 "app_name" = "Movie Grid";
 "latest_movies" = "Latest Movies";
 "poster_unavailable" = "POSTER\nUNAVAILABLE";
+"latest_movies" = "Latest Movies";
+"vote_average_label" = "Score";
+"release_date_label" = "Release Date";
 
 "error_networkingError" = "Networking error";
 

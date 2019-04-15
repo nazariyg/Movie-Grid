@@ -7,7 +7,7 @@ import Cornerstones
 // MARK: - Protocol
 
 public protocol ActivityTrackerProtocol {
-    func userDidSelectMovie(movieID: String)
+    func userDidSelectMovie(movieID: Int)
 }
 
 // MARK: - Implementation
@@ -25,8 +25,8 @@ public final class ActivityTracker: ActivityTrackerProtocol, SharedInstance {
 
     // MARK: - Activity tracking
 
-    public func userDidSelectMovie(movieID: String) {
-        activityTrackingService.trackActivity(name: #function, meta: ["movieID": movieID])
+    public func userDidSelectMovie(movieID: Int) {
+        activityTrackingService.trackActivity(name: #function, meta: ["movieID": String(movieID)])
     }
 
 }

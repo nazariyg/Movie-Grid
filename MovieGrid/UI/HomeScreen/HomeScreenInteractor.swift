@@ -128,6 +128,7 @@ final class HomeScreenInteractor: HomeScreenInteractorProtocol, RequestEmitter, 
     private func onSelectedMovie(movieID: Int) {
         guard let movie = movies.first(where: { $0.id == movieID }) else { return }
         eventEmitter.send(value: .selectedMovie(movieReference: ThreadSafeReference(to: movie), movieTitle: movie.title))
+        ActivityTracker.shared.userDidSelectMovie(movieID: movieID)
     }
 
 }

@@ -19,17 +19,28 @@ protocol HomeScreenRouterProtocol {
 
 final class HomeScreenRouter: HomeScreenRouterProtocol {
 
+    private var viewIsActive = true
+
     func wireIn(
         interactor: HomeScreenInteractorProtocol, presenter: HomeScreenPresenterProtocol, view: HomeScreenViewProtocol,
         workerQueueScheduler: QueueScheduler) {
 
+        (view as? UIViewController)?.reactive.viewWillAppear
+            .observe(on: workerQueueScheduler)
+            .observeValues { [weak self] _ in
+                self?.viewIsActive = true
+            }
+
         interactor.eventSignal
             .observe(on: workerQueueScheduler)
-            .observeValues { event in
+            .observeValues { [weak self] event in
+                guard let strongSelf = self else { return }
                 switch event {
                 case let .selectedMovie(movieReference, movieTitle):
+                    guard strongSelf.viewIsActive else { break }
                     let detailParameters = MovieDetailScene.Parameters(movieReference: movieReference, movieTitle: movieTitle)
                     UIGlobalSceneRouter.shared.go(MovieDetailScene.self, parameters: detailParameters)
+                    strongSelf.viewIsActive = false
                 default: break
                 }
             }
