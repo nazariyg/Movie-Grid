@@ -168,7 +168,9 @@ extension HomeScreenView: UICollectionViewDataSource {
 
         let view = moviesCollectionView.dequeueFooter(NowPlayingMoviesCollectionViewLoadingIndicatorFooter.self, forIndexPath: indexPath)
         if let isLoading = isLoading {
-            view.update(isLoading: isLoading, isHidden: ReactiveSwift.Property(loadingIndicatorIsHidden))
+            let isLoadingWhileNotRefreshing =
+                isLoading.producer.and(refreshControl.reactive.producer(for: \UIRefreshControl.isRefreshing).negate())
+            view.update(isLoading: isLoadingWhileNotRefreshing, isHidden: ReactiveSwift.Property(loadingIndicatorIsHidden))
         }
         return view
     }

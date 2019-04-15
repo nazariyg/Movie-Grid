@@ -56,10 +56,10 @@ final class NowPlayingMoviesCollectionViewLoadingIndicatorFooter: UICollectionRe
         }
     }
 
-    public func update(isLoading: ReactiveSwift.Property<Bool>, isHidden: ReactiveSwift.Property<Bool>) {
+    public func update(isLoading: SignalProducer<Bool, NoError>, isHidden: ReactiveSwift.Property<Bool>) {
         isLoadingObserverDisposable?.dispose()
         isLoadingObserverDisposable =
-            isLoading.producer
+            isLoading
                 .observe(on: UIScheduler())
                 .startWithValues { [weak self] isLoading in
                     guard let strongSelf = self else { return }
