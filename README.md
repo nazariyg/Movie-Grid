@@ -5,7 +5,7 @@
 To do a fair job of it, the repository includes a significant portion of my own code base that I've authored over time. The code base used by the app is my open source project I currently maintain at<br/>
 https://github.com/nazariyg/Swift-App-Core
 
-Hopefully, the points of interest given below will be helpful in navigating through what's most definitive about the app's architecture and its business logic.
+The information given below is only supplementary and absolutely optional. But hopefully these points of interest may be helpful in navigating through what's most definitive about the app's architecture and its business logic.
 
 ## Requirements
 
